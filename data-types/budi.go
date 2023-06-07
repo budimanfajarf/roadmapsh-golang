@@ -54,4 +54,20 @@ func main() {
 	fmt.Printf("exampleOfUint64 is %d bytes\n", unsafe.Sizeof(exampleOfUint64))
 	fmt.Printf("exampleOfUint64 is %d bits\n", unsafe.Sizeof(exampleOfUint64)*8)
 	fmt.Printf("exampleOfUint64 range is (0 to 2^64 -1) which is (%d to %d)\n\n", uint64(0), uint64((1<<64)-1))
+
+	var exampleOfFloat32 float32 = -3.4e+38
+	var exampleMinValueOfFloat32 float32 = -3.4e+38
+	var exampleMaxValueOfFloat32 float32 = 3.4e+38
+	fmt.Printf("exampleOfFloat32's type is %s\n", reflect.TypeOf(exampleOfFloat32))
+	fmt.Printf("exampleOfFloat32 is %d bytes\n", unsafe.Sizeof(exampleOfFloat32))
+	fmt.Printf("exampleOfFloat32 is %d bits\n", unsafe.Sizeof(exampleOfFloat32)*8)
+	fmt.Printf("exampleOfFloat32 range is (-3.4e+38 to 3.4e+38) which is (%f to %f) \n\n", exampleMinValueOfFloat32, exampleMaxValueOfFloat32)
+
+	var exampleOfFloat64 float64 = -1.7e+308
+	var exampleMinValueOfFloat64 float64 = -1.7e+308
+	var exampleMaxValueOfFloat64 float64 = 1.7e+308
+	fmt.Printf("exampleOfFloat64's type is %s\n", reflect.TypeOf(exampleOfFloat64))
+	fmt.Printf("exampleOfFloat64 is %d bytes\n", unsafe.Sizeof(exampleOfFloat64))
+	fmt.Printf("exampleOfFloat64 is %d bits\n", unsafe.Sizeof(exampleOfFloat64)*8)
+	fmt.Printf("exampleOfFloat64 range is (-1.7e+308 to 1.7e+308) which is (%f to %f) \n\n", exampleMinValueOfFloat64, exampleMaxValueOfFloat64)
 }
