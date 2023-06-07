@@ -18,4 +18,9 @@ func main() {
 
 	b := 2
 	fmt.Printf("b's typs is %s\n", reflect.TypeOf(b))
+
+	//This is computed as const uintSize = 32 << (^uint(0) >> 32 & 1) // 32 or 64
+	sizeOfUintInBits := bits.UintSize
+	fmt.Printf("%d bits\n", sizeOfUintInBits)
+
 }
