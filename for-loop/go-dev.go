@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	sum := 0
 
@@ -7,5 +9,5 @@ func main() {
 		sum += i
 	}
 
-	println(sum)
+	fmt.Println(sum)
 }
