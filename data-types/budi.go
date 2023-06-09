@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// Integers
 	var exampleOfInt8 int8 = 127
 	fmt.Printf("\nexampleOfInt8's type is %s\n", reflect.TypeOf(exampleOfInt8))
 	fmt.Printf("exampleOfInt8 is %d bytes\n", unsafe.Sizeof(exampleOfInt8))
@@ -31,6 +32,7 @@ func main() {
 	fmt.Printf("exampleOfInt64 is %d bits\n", unsafe.Sizeof(exampleOfInt64)*8)
 	fmt.Printf("exampleOfInt64 range is (-2^63 to 2^63 -1) which is (%d to %d)\n\n", -(1 << (64 - 1)), (1<<(64-1))-1)
 
+	// Unsigned Integers
 	var exampleOfUint8 uint8 = 255
 	fmt.Printf("exampleOfUint8's type is %s\n", reflect.TypeOf(exampleOfUint8))
 	fmt.Printf("exampleOfUint8 is %d bytes\n", unsafe.Sizeof(exampleOfUint8))
@@ -55,6 +57,7 @@ func main() {
 	fmt.Printf("exampleOfUint64 is %d bits\n", unsafe.Sizeof(exampleOfUint64)*8)
 	fmt.Printf("exampleOfUint64 range is (0 to 2^64 -1) which is (%d to %d)\n\n", uint64(0), uint64((1<<64)-1))
 
+	// Floats
 	var exampleOfFloat32 float32 = -3.4e+38
 	var exampleMinValueOfFloat32 float32 = -3.4e+38
 	var exampleMaxValueOfFloat32 float32 = 3.4e+38
@@ -70,4 +73,16 @@ func main() {
 	fmt.Printf("exampleOfFloat64 is %d bytes\n", unsafe.Sizeof(exampleOfFloat64))
 	fmt.Printf("exampleOfFloat64 is %d bits\n", unsafe.Sizeof(exampleOfFloat64)*8)
 	fmt.Printf("exampleOfFloat64 range is (-1.7e+308 to 1.7e+308) which is (%f to %f) \n\n", exampleMinValueOfFloat64, exampleMaxValueOfFloat64)
+
+	/*
+		Byte
+		- byte in Go is an alias for uint8 meaning it is an integer value
+		- This integer value is of 8 bits and it represents one byte i.e number between 0-255
+		- byte is used to represent ASCII characters
+	*/
+	var exampleByte byte = 'a'
+	fmt.Printf("exampleByte's type is %s\n", reflect.TypeOf(exampleByte))
+	fmt.Printf("exampleByte is %d bytes\n", unsafe.Sizeof(exampleByte))
+	fmt.Printf("exampleByte is %d bits\n", unsafe.Sizeof(exampleByte)*8)
+	fmt.Printf("exampleByte character is %c\n\n", exampleByte)
 }
