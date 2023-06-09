@@ -74,12 +74,6 @@ func main() {
 	fmt.Printf("exampleOfFloat64 is %d bits\n", unsafe.Sizeof(exampleOfFloat64)*8)
 	fmt.Printf("exampleOfFloat64 range is (-1.7e+308 to 1.7e+308) which is (%f to %f) \n\n", exampleMinValueOfFloat64, exampleMaxValueOfFloat64)
 
-	/*
-		Byte
-		- byte in Go is an alias for uint8 meaning it is an integer value
-		- This integer value is of 8 bits and it represents one byte i.e number between 0-255
-		- byte is used to represent ASCII characters
-	*/
 	var exampleByte byte = 'a'
 	fmt.Printf("exampleByte's type is %s\n", reflect.TypeOf(exampleByte))
 	fmt.Printf("exampleByte is %d bytes\n", unsafe.Sizeof(exampleByte))
