@@ -48,4 +48,17 @@ func main() {
 	} else {
 		println("else")
 	}
+
+	// Ternary ? operator alternatives
+	// You can’t write a short one-line conditional in Go; there is no ternary conditional operator
+	// In some cases, you may want to create a dedicated function.
+	println(calculateMin(x, y))
+}
+
+func calculateMin(x int, y int) int {
+	if x <= y {
+		return x
+	}
+
+	return y
 }
