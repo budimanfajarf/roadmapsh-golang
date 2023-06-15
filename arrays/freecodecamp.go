@@ -37,4 +37,15 @@ func main() {
 	identityMatrixV2[1] = [3]int{0, 1, 0}
 	identityMatrixV2[2] = [3]int{0, 0, 1}
 	fmt.Printf("Identity Matrix V2: %v\n", identityMatrixV2)
+
+	// In Go, when we assign an array to another variable
+	// it will create a COPY of the array
+	// not a reference to the array
+	// to reference the array, we can use pointer
+
+	a := [...]int{1, 2, 3}
+	b := &a // point to a
+	b[1] = 5
+	fmt.Println(a)
+	fmt.Println(b)
 }
