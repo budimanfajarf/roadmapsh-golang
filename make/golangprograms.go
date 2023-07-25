@@ -34,4 +34,23 @@ func main() {
 	employeeList["Mark"] = 10
 	employeeList["Sandy"] = 20
 	fmt.Println("employeeList", employeeList)
+
+	// Experiment - Slices of map
+	var people = make([]map[string]string, 10)
+
+	people[0] = map[string]string{
+		"name": "John Doe",
+		"age":  "30",
+	}
+
+	people[1] = map[string]string{
+		"name":       "Budi",
+		"age":        "27",
+		"occupation": "Software Engineer",
+	}
+
+	fmt.Println("people", people)
+
+	var budi = people[1]
+	fmt.Println("budi", budi)
 }
