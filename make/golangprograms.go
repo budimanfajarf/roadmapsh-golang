@@ -23,4 +23,15 @@ func main() {
 	fmt.Printf("strSlice \tLen: %v \tCap: %v\n", len(strSlice), cap(strSlice))
 	fmt.Println(reflect.ValueOf(strSlice).Kind())
 	fmt.Println("strSlice", strSlice)
+
+	// Create map using make() function
+	var employee = make(map[string]int)
+	employee["Mark"] = 10
+	employee["Sandy"] = 20
+	fmt.Println("employee", employee)
+
+	employeeList := make(map[string]int)
+	employeeList["Mark"] = 10
+	employeeList["Sandy"] = 20
+	fmt.Println("employeeList", employeeList)
 }
